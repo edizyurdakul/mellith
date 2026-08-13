@@ -1,0 +1,28 @@
+{
+  "name": "@mellith/server",
+  "version": "0.0.1",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./client": {
+      "types": "./dist/client.d.ts",
+      "default": "./dist/client.js"
+    }
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "bun --watch run src/index.ts",
+    "type-check": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@mellith/types": "workspace:*",
+    "hono": "^4.13.1"
+  },
+  "devDependencies": {
+    "@types/bun": "latest"
+  }
+}
