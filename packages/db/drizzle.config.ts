@@ -1,3 +1,4 @@
+import { env } from "@mellith/env";
 import { defineConfig } from "drizzle-kit";
 
 export default defineConfig({
@@ -5,6 +6,6 @@ export default defineConfig({
   schema: "./src/schema.ts",
   out: "./drizzle",
   dbCredentials: {
-    url: process.env.DATABASE_URL ?? "postgres://localhost:5432/mellith",
+    url: env.DATABASE_URL,
   },
 });

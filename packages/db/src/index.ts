@@ -1,15 +1,9 @@
-import { drizzle } from "drizzle-orm/postgres-js";
-import postgres from "postgres";
+import { env } from "@mellith/env";
+import { SQL } from "bun";
+import { drizzle } from "drizzle-orm/bun-sql";
 
 import * as schema from "./schema";
 
-const connectionString = process.env.DATABASE_URL;
-
-if (!connectionString) {
-  throw new Error("DATABASE_URL is not set. Add it to apps/server/.env");
-}
-
-export const client = postgres(connectionString);
-export const db = drizzle(client, { schema });
-
+export const client = new SQL(env.DATABASE_URL!);
+export const db = drizzle({ client, schema });
 export * from "./schema";
