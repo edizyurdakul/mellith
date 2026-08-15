@@ -1,0 +1,100 @@
+[
+  {
+    "label": "dev",
+    "command": "bun",
+    "args": ["run", "dev"],
+    "cwd": "$ZED_WORKTREE_ROOT",
+    "reveal": "always"
+  },
+  {
+    "label": "dev:server",
+    "command": "bun",
+    "args": ["run", "dev:server"],
+    "cwd": "$ZED_WORKTREE_ROOT",
+    "reveal": "always"
+  },
+  {
+    "label": "dev:client",
+    "command": "bun",
+    "args": ["run", "dev:client"],
+    "cwd": "$ZED_WORKTREE_ROOT",
+    "reveal": "always"
+  },
+  {
+    "label": "build",
+    "command": "bun",
+    "args": ["run", "build"],
+    "cwd": "$ZED_WORKTREE_ROOT",
+    "reveal": "always"
+  },
+  {
+    "label": "type-check",
+    "command": "bun",
+    "args": ["run", "type-check"],
+    "cwd": "$ZED_WORKTREE_ROOT",
+    "reveal": "always"
+  },
+  {
+    "label": "lint",
+    "command": "bun",
+    "args": ["run", "lint"],
+    "cwd": "$ZED_WORKTREE_ROOT",
+    "reveal": "always"
+  },
+  {
+    "label": "format",
+    "command": "bun",
+    "args": ["run", "format"],
+    "cwd": "$ZED_WORKTREE_ROOT",
+    "reveal": "always"
+  },
+  {
+    "label": "db:generate",
+    "command": "bunx",
+    "args": ["drizzle-kit", "generate"],
+    "cwd": "$ZED_WORKTREE_ROOT/packages/db",
+    "reveal": "always"
+  },
+  {
+    "label": "db:migrate",
+    "command": "bunx",
+    "args": ["drizzle-kit", "migrate"],
+    "cwd": "$ZED_WORKTREE_ROOT/packages/db",
+    "reveal": "always"
+  },
+  {
+    "label": "db:push",
+    "command": "bunx",
+    "args": ["drizzle-kit", "push"],
+    "cwd": "$ZED_WORKTREE_ROOT/packages/db",
+    "reveal": "always"
+  },
+  {
+    "label": "db:studio",
+    "command": "bunx",
+    "args": ["drizzle-kit", "studio"],
+    "cwd": "$ZED_WORKTREE_ROOT/packages/db",
+    "reveal": "always"
+  },
+  {
+    "label": "docker:up",
+    "command": "docker",
+    "args": ["compose", "up", "-d"],
+    "cwd": "$ZED_WORKTREE_ROOT",
+    "reveal": "always"
+  },
+  {
+    "label": "docker:down",
+    "command": "docker",
+    "args": ["compose", "down"],
+    "cwd": "$ZED_WORKTREE_ROOT",
+    "reveal": "always"
+  },
+  {
+    "label": "docker:logs",
+    "command": "docker",
+    "args": ["compose", "logs", "-f"],
+    "cwd": "$ZED_WORKTREE_ROOT",
+    "reveal": "always"
+  }
+]
