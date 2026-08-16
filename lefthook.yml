@@ -4,5 +4,5 @@ pre-commit:
       glob: "**/*.{js,jsx,ts,tsx}"
       stage_fixed: true
     - run: bunx oxfmt --write {staged_files}
-      glob: "**/*.{js,jsx,ts,tsx,json,jsonc,css,md,mdx}"
+      glob: "**/*.{js,jsx,ts,tsx,json,jsonc,css,md,mdx,yml,yaml}"
       stage_fixed: true
